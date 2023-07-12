@@ -82,7 +82,8 @@ namespace AcademyProject_Generics
             Console.Write("Enter the name of the person for search (optional*[, surname, age]): ");
             string data = Console.ReadLine();
 
-            string[] tokens = data.Split(,);
+            char[] splitters = { ',', ' ', '.', '-', '_' };
+            string[] tokens = data.Split(splitters, options: StringSplitOptions.RemoveEmptyEntries);
             Console.WriteLine(tokens.Length);
             foreach(var item in tokens)
             {
