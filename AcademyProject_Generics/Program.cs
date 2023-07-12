@@ -84,11 +84,6 @@ namespace AcademyProject_Generics
 
             char[] splitters = { ',', ' ', '.', '-', '_' };
             string[] tokens = data.Split(splitters, options: StringSplitOptions.RemoveEmptyEntries);
-            Console.WriteLine(tokens.Length);
-            foreach(var item in tokens)
-            {
-                Console.Write("," + item);
-            }
 
             if (tokens.Length < 0 || tokens.Length > 3)
                 throw new ArgumentException($"Cannot enter more than 3 parameter for search. {tokens.Length} parameters entered.");
